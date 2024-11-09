@@ -2,23 +2,31 @@ PODS:
   - iOSDropDown (0.4.0)
   - IQKeyboardManagerSwift (6.5.11)
   - lottie-ios (3.4.3)
+  - SideMenu (6.5.0)
+  - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - iOSDropDown
   - IQKeyboardManagerSwift (= 6.5.11)
   - lottie-ios (= 3.4.3)
+  - SideMenu (~> 6.0)
+  - SnapKit (~> 5.7.0)
 
 SPEC REPOS:
   trunk:
     - iOSDropDown
     - IQKeyboardManagerSwift
     - lottie-ios
+    - SideMenu
+    - SnapKit
 
 SPEC CHECKSUMS:
   iOSDropDown: ce9daa584eaa5567cafc1b633e3cc7eb6d9cea42
   IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   lottie-ios: 9ae750cdc7820fecbd3c2f0cfc493038208fcdc4
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: 2d9b5ce0b44a8fd8c3c5087b0bd9ce1b9c12ff87
+PODFILE CHECKSUM: b0ea28e0b9d62fbf239eb44ddbeedfdb28a45abb
 
 COCOAPODS: 1.15.2
