@@ -8,6 +8,67 @@
 import UIKit
 import ImageIO
 
+import UIKit
+
+extension UIImage {
+    func removeBackgroundColor(color: UIColor) -> UIImage? {
+        let imageRect = CGRect(origin: .zero, size: self.size)
+        
+        UIGraphicsBeginImageContextWithOptions(self.size, false, self.scale)
+        guard let context = UIGraphicsGetCurrentContext() else { return nil }
+        
+        // Set the background color to clear
+        context.setFillColor(UIColor.clear.cgColor)
+        context.fill(imageRect)
+        
+        self.draw(in: imageRect, blendMode: .normal, alpha: 1.0)
+        
+        // Get the pixel data of the image
+        guard let cgImage = self.cgImage else { return nil }
+        
+        let width = cgImage.width
+        let height = cgImage.height
+        let colorToRemove = color.cgColor
+        
+        let rawData = UnsafeMutablePointer<UInt8>.allocate(capacity: width * height * 4)
+        let bytesPerRow = width * 4
+        let colorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        let context2 = CGContext(data: rawData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)
+        
+        context2?.draw(cgImage, in: imageRect)
+        
+        // Loop through pixels and replace colorToRemove with transparency
+        for x in 0..<width {
+            for y in 0..<height {
+                let offset = (y * width + x) * 4
+                let r = rawData[offset]
+                let g = rawData[offset + 1]
+                let b = rawData[offset + 2]
+                
+                // Check if the pixel color matches the color to remove
+                if r == UInt8(colorToRemove.components![0] * 255) &&
+                    g == UInt8(colorToRemove.components![1] * 255) &&
+                    b == UInt8(colorToRemove.components![2] * 255) {
+                    
+                    // Replace with transparency
+                    rawData[offset + 3] = 0
+                }
+            }
+        }
+        
+        // Create new CGImage from modified pixel data and return as UIImage
+        let newContext = CGContext(data: rawData, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: colorSpace, bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue)
+        
+        if let newCGImage = newContext?.makeImage() {
+            return UIImage(cgImage: newCGImage)
+        }
+        
+        return nil
+    }
+}
+
+
 extension UIImageView {
     func setLocalImage(named imageName: String) {
         // Check if the image is already cached
@@ -74,6 +135,20 @@ extension UIViewController {
            configure?(viewController)
            self.navigationController?.pushViewController(viewController, animated: animated)
        }
+    
+    func pushWithData<T: UIViewController>(ofType type: T.Type, storyboardName: String = "Main", animated: Bool = true, configure: ((T) -> Void)? = nil) {
+          // Get the storyboard instance
+          let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+          
+          // Instantiate the view controller from the storyboard
+          let viewController = storyboard.instantiateViewController(withIdentifier: String(describing: T.self)) as! T
+          
+          // Configure the view controller if needed
+          configure?(viewController)
+          
+          // Push the view controller to the navigation stack
+          self.navigationController?.pushViewController(viewController, animated: animated)
+      }
 }
 
 //MARK: - UIView

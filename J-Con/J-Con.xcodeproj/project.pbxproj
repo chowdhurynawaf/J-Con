@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		52BD52932CDFEF8800DFA8F8 /* BaseCVVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD52912CDFEF8800DFA8F8 /* BaseCVVC.swift */; };
 		52BD52942CDFEF8900DFA8F8 /* BaseCVVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BD52922CDFEF8800DFA8F8 /* BaseCVVC.xib */; };
+		52BD52962CDFF16B00DFA8F8 /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD528D2CDFEF4F00DFA8F8 /* ColumnFlowLayout.swift */; };
+		52BD52982CDFF24D00DFA8F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD52972CDFF24D00DFA8F8 /* Extensions.swift */; };
+		52BD52992CDFF25700DFA8F8 /* IBDESIGNABLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD528C2CDFEF0600DFA8F8 /* IBDESIGNABLE.swift */; };
+		52BD529A2CDFF25C00DFA8F8 /* SafariHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD528F2CDFEF4F00DFA8F8 /* SafariHelper.swift */; };
+		52BD529B2CDFF26100DFA8F8 /* RectangularTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD528E2CDFEF4F00DFA8F8 /* RectangularTextView.swift */; };
+		52BD529E2CDFF38B00DFA8F8 /* Splashvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD529D2CDFF38B00DFA8F8 /* Splashvc.swift */; };
+		52BD52A02CDFFC7800DFA8F8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD529F2CDFFC7800DFA8F8 /* HomeVC.swift */; };
 		52DF9AB92CDE6A2900E22FCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9AB82CDE6A2900E22FCC /* AppDelegate.swift */; };
 		52DF9ABB2CDE6A2900E22FCC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9ABA2CDE6A2900E22FCC /* SceneDelegate.swift */; };
 		52DF9ABD2CDE6A2900E22FCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9ABC2CDE6A2900E22FCC /* ViewController.swift */; };
@@ -24,11 +31,14 @@
 		23A1B456F67AC04E7CE95568 /* Pods-J-Con.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-J-Con.debug.xcconfig"; path = "Target Support Files/Pods-J-Con/Pods-J-Con.debug.xcconfig"; sourceTree = "<group>"; };
 		52BD528C2CDFEF0600DFA8F8 /* IBDESIGNABLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDESIGNABLE.swift; sourceTree = "<group>"; };
 		52BD528D2CDFEF4F00DFA8F8 /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
-		52BD528E2CDFEF4F00DFA8F8 /* CirculerTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirculerTextView.swift; sourceTree = "<group>"; };
+		52BD528E2CDFEF4F00DFA8F8 /* RectangularTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangularTextView.swift; sourceTree = "<group>"; };
 		52BD528F2CDFEF4F00DFA8F8 /* SafariHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariHelper.swift; sourceTree = "<group>"; };
 		52BD52902CDFEF6A00DFA8F8 /* WaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveView.swift; sourceTree = "<group>"; };
 		52BD52912CDFEF8800DFA8F8 /* BaseCVVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCVVC.swift; sourceTree = "<group>"; };
 		52BD52922CDFEF8800DFA8F8 /* BaseCVVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseCVVC.xib; sourceTree = "<group>"; };
+		52BD52972CDFF24D00DFA8F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		52BD529D2CDFF38B00DFA8F8 /* Splashvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splashvc.swift; sourceTree = "<group>"; };
+		52BD529F2CDFFC7800DFA8F8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		52DF9AB52CDE6A2900E22FCC /* J-Con.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "J-Con.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF9AB82CDE6A2900E22FCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF9ABA2CDE6A2900E22FCC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +75,8 @@
 			isa = PBXGroup;
 			children = (
 				52BD52902CDFEF6A00DFA8F8 /* WaveView.swift */,
-				52BD528E2CDFEF4F00DFA8F8 /* CirculerTextView.swift */,
+				52BD52972CDFF24D00DFA8F8 /* Extensions.swift */,
+				52BD528E2CDFEF4F00DFA8F8 /* RectangularTextView.swift */,
 				52BD528D2CDFEF4F00DFA8F8 /* ColumnFlowLayout.swift */,
 				52BD528F2CDFEF4F00DFA8F8 /* SafariHelper.swift */,
 				52BD528C2CDFEF0600DFA8F8 /* IBDESIGNABLE.swift */,
@@ -80,6 +91,15 @@
 				52BD52922CDFEF8800DFA8F8 /* BaseCVVC.xib */,
 			);
 			path = xibs;
+			sourceTree = "<group>";
+		};
+		52BD529C2CDFF37800DFA8F8 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				52BD529D2CDFF38B00DFA8F8 /* Splashvc.swift */,
+				52BD529F2CDFFC7800DFA8F8 /* HomeVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		52DF9AAC2CDE6A2900E22FCC = {
@@ -103,6 +123,7 @@
 		52DF9AB72CDE6A2900E22FCC /* J-Con */ = {
 			isa = PBXGroup;
 			children = (
+				52BD529C2CDFF37800DFA8F8 /* VC */,
 				52BD52952CDFEF8D00DFA8F8 /* xibs */,
 				52BD528B2CDFEEF400DFA8F8 /* Helper */,
 				52DF9AB82CDE6A2900E22FCC /* AppDelegate.swift */,
@@ -243,10 +264,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				52DF9ABD2CDE6A2900E22FCC /* ViewController.swift in Sources */,
+				52BD529E2CDFF38B00DFA8F8 /* Splashvc.swift in Sources */,
+				52BD52962CDFF16B00DFA8F8 /* ColumnFlowLayout.swift in Sources */,
 				52DF9AB92CDE6A2900E22FCC /* AppDelegate.swift in Sources */,
 				52DF9ABB2CDE6A2900E22FCC /* SceneDelegate.swift in Sources */,
+				52BD529B2CDFF26100DFA8F8 /* RectangularTextView.swift in Sources */,
 				52DF9AC32CDE6A2900E22FCC /* J_Con.xcdatamodeld in Sources */,
+				52BD529A2CDFF25C00DFA8F8 /* SafariHelper.swift in Sources */,
 				52BD52932CDFEF8800DFA8F8 /* BaseCVVC.swift in Sources */,
+				52BD52A02CDFFC7800DFA8F8 /* HomeVC.swift in Sources */,
+				52BD52992CDFF25700DFA8F8 /* IBDESIGNABLE.swift in Sources */,
+				52BD52982CDFF24D00DFA8F8 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

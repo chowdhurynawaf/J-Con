@@ -1,6 +1,6 @@
 import UIKit
 
-class CircularTextView: UIView {
+class RectangularTextView: UIView {
     
     enum RotationDirection {
         case clockwise
@@ -10,7 +10,6 @@ class CircularTextView: UIView {
     
     struct Layer {
         var texts: [String]
-        var radius: CGFloat
         var rotationAngle: CGFloat = 0
         var rotationSpeed: CGFloat // Speed of rotation
         var font: UIFont // Font for this layer
@@ -20,9 +19,8 @@ class CircularTextView: UIView {
         var reverseDuration: TimeInterval // Duration to stay in one direction before reversing
 
         // Initializer with default reverse duration
-        init(texts: [String], radius: CGFloat, rotationSpeed: CGFloat, font: UIFont, textColor: UIColor, alpha: CGFloat, direction: RotationDirection, reverseDuration: TimeInterval = 0) {
+        init(texts: [String], rotationSpeed: CGFloat, font: UIFont, textColor: UIColor, alpha: CGFloat, direction: RotationDirection, reverseDuration: TimeInterval = 0) {
             self.texts = texts
-            self.radius = radius
             self.rotationSpeed = rotationSpeed
             self.font = font
             self.textColor = textColor
@@ -40,21 +38,22 @@ class CircularTextView: UIView {
     
     private var displayLink: CADisplayLink?
     private var reverseTimers: [Timer] = []
-
+    
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         context?.saveGState()
         
+        // Center of the rectangle
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
 
         for layer in layers {
             let textLength = layer.texts.count
-            let angleIncrement = (2 * CGFloat.pi) / CGFloat(textLength)
+            let verticalSpacing: CGFloat = 20 // Adjust vertical spacing between texts
 
             for (index, text) in layer.texts.enumerated() {
-                let angle = angleIncrement * CGFloat(index) + layer.rotationAngle
-                let x = center.x + layer.radius * cos(angle)
-                let y = center.y + layer.radius * sin(angle)
+                let yOffset = (CGFloat(index) * verticalSpacing) + layer.rotationAngle
+                let x = center.x
+                let y = center.y + yOffset
 
                 let attributes: [NSAttributedString.Key: Any] = [
                     .font: layer.font,
@@ -62,7 +61,6 @@ class CircularTextView: UIView {
                 ]
 
                 let textSize = text.size(withAttributes: attributes)
-
                 let textRect = CGRect(x: x - textSize.width / 2, y: y - textSize.height / 2, width: textSize.width, height: textSize.height)
                 text.draw(in: textRect, withAttributes: attributes)
             }
@@ -99,7 +97,7 @@ class CircularTextView: UIView {
     
     @objc private func updateRotation() {
         for index in layers.indices {
-            let layer = layers[index]
+            var layer = layers[index]
             var speed = layer.rotationSpeed
             
             switch layer.direction {
@@ -137,3 +135,4 @@ class CircularTextView: UIView {
         layer.add(pulseAnimation, forKey: "pulseAnimation")
     }
 }
+

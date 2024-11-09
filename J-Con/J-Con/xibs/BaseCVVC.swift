@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SideMenu
+
 
 class BaseCVVC: UIViewController {
     
@@ -15,7 +15,7 @@ class BaseCVVC: UIViewController {
     @IBOutlet weak var cvHolderView: UIView!
     @IBOutlet weak var parentHolderView: UIView!
     @IBOutlet weak var redview: UIView!
-    @IBOutlet weak var menuBtn: UIButton!     
+    @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var redviewheight: NSLayoutConstraint!
     
@@ -27,23 +27,13 @@ class BaseCVVC: UIViewController {
         setup()
     }
     
-    private func setSideBar() {
-        
-        let menu = SideMenuNavigationController(rootViewController: SideBarVC())
-        SideMenuManager.default.leftMenuNavigationController = menu
-
-    }
+   
     
-    @objc func showMenu() {
-        
-        if let menu = SideMenuManager.default.leftMenuNavigationController {
-            present(menu, animated: true, completion: nil)
-        }
-    }
-    
+  
     private func setup() {
         self.backBtn.tintColor = .white
         self.menuBtn.tintColor = .white
+        self.menuBtn.isHidden = true
     }
 
     override func loadView() {
@@ -63,7 +53,7 @@ class BaseCVVC: UIViewController {
     
     @IBAction func tappedmenu(_ sender: Any) {
     
-        self.showMenu()
+        
     }
     
     func createColumnFlowLayout(cellsPerRow: Int = 2,

@@ -11,6 +11,6 @@ target 'J-Con' do
   pod 'iOSDropDown'
   pod 'IQKeyboardManagerSwift', '6.5.11'
   pod 'SnapKit', '~> 5.7.0'
-  pod 'SideMenu', '~> 6.0'
+  
 
 end
