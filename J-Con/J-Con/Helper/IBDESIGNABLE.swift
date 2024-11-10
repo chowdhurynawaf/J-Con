@@ -56,7 +56,8 @@ class CurvedHeaderView: UIView {
         }
         
         path.close()
-        UIColor.systemRed.setFill()
+    
+        UIColor(hex: "#A9FCFF")?.setFill()
         path.fill()
     }
 }

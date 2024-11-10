@@ -10,7 +10,8 @@ final class SplashVC: UIViewController {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isHidden = true
-        startAnimation()
+       // startAnimation()
+        self.moveToVC()
     }
     
     
@@ -40,7 +41,7 @@ final class SplashVC: UIViewController {
             
         }, completion: { _ in
             // After the "many" effect, wait for 2 seconds before swapping the images
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 self.swapImages()
             }
         })
@@ -86,10 +87,14 @@ final class SplashVC: UIViewController {
             UIView.animate(withDuration: 1.0, animations: {
                 self.imageView1.transform = CGAffineTransform(scaleX: 1.2, y: 1.2) // Optional zoom effect
                
-                self.pushWithData(ofType: HomeVC.self, storyboardName: "Main", animated: true) { v in
+            
+            }) { _ in
+                self.pushWithData(ofType: HomeVC.self, storyboardName: "Main", animated: true) { _ in
                     
                 }
-            })
+            }
         })
+        
+       
     }
 }
