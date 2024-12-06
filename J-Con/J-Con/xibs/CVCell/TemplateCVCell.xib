@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TemplateCVCell" id="gTV-IL-0wX" customClass="TemplateCVCell" customModule="J_Con" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="330" height="105"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="330" height="105"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jK6-QB-OHQ" customClass="CustomView" customModule="J_Con" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="320" height="95"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vK4-Ty-kqU">
+                                <rect key="frame" x="2" y="2" width="316" height="91"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vK4-Ty-kqU" secondAttribute="trailing" constant="2" id="4i4-pD-WB0"/>
+                            <constraint firstItem="vK4-Ty-kqU" firstAttribute="top" secondItem="jK6-QB-OHQ" secondAttribute="top" constant="2" id="62I-Pu-ZCX"/>
+                            <constraint firstAttribute="bottom" secondItem="vK4-Ty-kqU" secondAttribute="bottom" constant="2" id="Ew2-ep-qjt"/>
+                            <constraint firstItem="vK4-Ty-kqU" firstAttribute="leading" secondItem="jK6-QB-OHQ" secondAttribute="leading" constant="2" id="t1Y-FM-Ysx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="jK6-QB-OHQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="5qE-LM-PhY"/>
+                <constraint firstAttribute="bottom" secondItem="jK6-QB-OHQ" secondAttribute="bottom" constant="5" id="Co0-Am-NFA"/>
+                <constraint firstAttribute="trailing" secondItem="jK6-QB-OHQ" secondAttribute="trailing" constant="5" id="X4j-eP-vKo"/>
+                <constraint firstItem="jK6-QB-OHQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="mCt-Y6-km0"/>
+            </constraints>
+            <size key="customSize" width="330" height="105"/>
+            <connections>
+                <outlet property="parentView" destination="jK6-QB-OHQ" id="oAA-DV-b5R"/>
+                <outlet property="txtView" destination="vK4-Ty-kqU" id="z1Y-DG-gd9"/>
+            </connections>
+            <point key="canvasLocation" x="177" y="38"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -14,10 +14,11 @@ class BaseCVVC: UIViewController {
     @IBOutlet weak var cv: UICollectionView!
     @IBOutlet weak var cvHolderView: UIView!
     @IBOutlet weak var parentHolderView: UIView!
-    @IBOutlet weak var redview: UIView!
+    @IBOutlet weak var redview: CurvedHeaderView!
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var redviewheight: NSLayoutConstraint!
+    
     
     
     override func viewDidLoad() {
@@ -34,6 +35,8 @@ class BaseCVVC: UIViewController {
         self.backBtn.tintColor = .white
         self.menuBtn.tintColor = .white
         self.menuBtn.isHidden = true
+        self.redview.curveType = 2
+        self.redview.curveHeight = 160
     }
 
     override func loadView() {

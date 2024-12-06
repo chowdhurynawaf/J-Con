@@ -11,16 +11,15 @@ import MobileCoreServices
 
 final class HomeVC: UIViewController,UIDocumentPickerDelegate , UITextFieldDelegate{
     
-    @IBOutlet weak var jconImg: UIImageView!
-    
+
+    @IBOutlet weak var editBtn: CustomButton!
     @IBOutlet weak var audioLbl: UILabel!
-    
     @IBOutlet weak var txtField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playGif()
+        
         audioLbl.isHidden = true
         txtField.delegate = self
         
@@ -49,27 +48,42 @@ final class HomeVC: UIViewController,UIDocumentPickerDelegate , UITextFieldDeleg
         // Print or use the selected audio file URL
         print("Selected audio file URL: \(audioURL)")
         audioLbl.isHidden =  false
-        audioLbl.text = "\(audioURL)"
+        audioLbl.text = "\(audioURL.lastPathComponent)"
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
             
-            
+            self.gotToLoaderVC()
         }
        
     }
     
+    func gotToLoaderVC() {
+        pushWithData(ofType: RotatingCharacterLoaderVC.self)
+    }
    
     // Delegate method to handle cancellation
     func documentPickerWasCancelled(_ controller: UIDocumentPickerViewController) {
         print("User canceled file picker")
     }
     
-    private func playGif() {
+    @IBAction func commandBtnTapped(_ sender: Any) {
         
-        if let gifPath = Bundle.main.path(forResource: "J-CON", ofType: "gif"),
-           let gifData = try? Data(contentsOf: URL(fileURLWithPath: gifPath)) {
-            let animatedImage = SDAnimatedImage(data: gifData)
-            jconImg.image = animatedImage
+        self.moveToCommandVC()
+        
+    }
+    
+    
+    @IBAction func editBtnTapped(_ sender: Any) {
+        
+        pushViewController(ofType: TemplateVC.self)
+    }
+    
+    
+    private func moveToCommandVC() {
+        
+        pushWithData(ofType: CommandVC.self,storyboardName: "Main") { vc in
+            
+            
         }
     }
 }

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RotatingCharacterLoaderVC" customModule="j_lingo" customModuleProvider="target">
+            <connections>
+                <outlet property="loaderTextView" destination="L3i-Pd-CmI" id="tDL-Lh-sCz"/>
+                <outlet property="loaderview" destination="7Qj-1M-vAc" id="z2Z-ac-5Sa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TPg-g8-dQj">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Qj-1M-vAc">
+                            <rect key="frame" x="19.666666666666657" y="249" width="353.66666666666674" height="354"/>
+                            <subviews>
+                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L3i-Pd-CmI" customClass="CircularTextView" customModule="j_lingo" customModuleProvider="target">
+                                    <rect key="frame" x="5" y="5" width="343.66666666666669" height="344"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="textColor" systemColor="labelColor"/>
+                                    <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="L3i-Pd-CmI" firstAttribute="top" secondItem="7Qj-1M-vAc" secondAttribute="top" constant="5" id="127-lX-ili"/>
+                                <constraint firstItem="L3i-Pd-CmI" firstAttribute="leading" secondItem="7Qj-1M-vAc" secondAttribute="leading" constant="5" id="S4c-tx-OK9"/>
+                                <constraint firstAttribute="bottom" secondItem="L3i-Pd-CmI" secondAttribute="bottom" constant="5" id="Wij-zK-S2C"/>
+                                <constraint firstAttribute="width" secondItem="7Qj-1M-vAc" secondAttribute="height" multiplier="1:1" id="gqF-MJ-Ni8"/>
+                                <constraint firstAttribute="trailing" secondItem="L3i-Pd-CmI" secondAttribute="trailing" constant="5" id="w4G-mg-VFm"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="7Qj-1M-vAc" firstAttribute="width" secondItem="TPg-g8-dQj" secondAttribute="width" multiplier="0.9" id="LFQ-oQ-rv2"/>
+                        <constraint firstItem="7Qj-1M-vAc" firstAttribute="centerX" secondItem="TPg-g8-dQj" secondAttribute="centerX" id="QPf-DX-8vG"/>
+                        <constraint firstItem="7Qj-1M-vAc" firstAttribute="centerY" secondItem="TPg-g8-dQj" secondAttribute="centerY" id="lUE-6E-3wl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="TPg-g8-dQj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PcU-3h-dr7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TPg-g8-dQj" secondAttribute="trailing" id="WrH-s9-jTw"/>
+                <constraint firstItem="TPg-g8-dQj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="mpu-gC-IVy"/>
+                <constraint firstAttribute="bottom" secondItem="TPg-g8-dQj" secondAttribute="bottom" id="raO-ls-mgW"/>
+            </constraints>
+            <point key="canvasLocation" x="-21" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

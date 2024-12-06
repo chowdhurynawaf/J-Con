@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseCVVC" customModule="j_lingo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseCVVC" customModule="J_Con" customModuleProvider="target">
             <connections>
                 <outlet property="TitleLbl" destination="lea-2P-skD" id="yuH-7N-qzV"/>
                 <outlet property="backBtn" destination="PuJ-vZ-dOq" id="FUv-sc-dS3"/>
@@ -30,7 +30,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dds-ZP-U1n">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V42-dT-HJ2">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V42-dT-HJ2" customClass="CurvedHeaderView" customModule="J_Con" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="134.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PSb-3R-cZa">
@@ -51,20 +51,21 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button hidden="YES" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuJ-vZ-dOq">
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuJ-vZ-dOq">
                                     <rect key="frame" x="20" y="62" width="30" height="30"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="30" id="DcR-aq-BzZ"/>
                                         <constraint firstAttribute="width" secondItem="PuJ-vZ-dOq" secondAttribute="height" multiplier="1:1" id="Rcf-Tu-nKg"/>
                                     </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain" image="back"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="arrow.left.circle.fill" catalog="system"/>
                                     <connections>
                                         <action selector="tappedBackBtn:" destination="-1" eventType="touchUpInside" id="D1A-BF-hr2"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" name="sunred"/>
+                            <color key="backgroundColor" red="0.1215686275" green="0.29411764709999999" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="lea-2P-skD" secondAttribute="trailing" id="2cA-TP-HMW"/>
                                 <constraint firstItem="PuJ-vZ-dOq" firstAttribute="leading" secondItem="V42-dT-HJ2" secondAttribute="leading" constant="20" id="A2l-5F-EST"/>
@@ -129,11 +130,8 @@
         </view>
     </objects>
     <resources>
-        <image name="back" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="arrow.left.circle.fill" catalog="system" width="128" height="123"/>
         <image name="menu" width="21.333333969116211" height="21.333333969116211"/>
-        <namedColor name="sunred">
-            <color red="0.9869999885559082" green="0.15800000727176666" blue="0.11299999803304672" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

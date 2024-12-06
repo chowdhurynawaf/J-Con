@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5241DCFB2CE161EA000EFC56 /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5241DCFA2CE161EA000EFC56 /* LoaderVC.swift */; };
+		52041C402CE366230064D00B /* RotatingCharacterLoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041C3F2CE366230064D00B /* RotatingCharacterLoaderVC.swift */; };
+		52041C422CE366310064D00B /* RotatingCharacterLoaderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52041C412CE366310064D00B /* RotatingCharacterLoaderVC.xib */; };
+		52041C4B2CE367AF0064D00B /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52041C442CE367AE0064D00B /* Poppins-Black.ttf */; };
+		52041C4C2CE367AF0064D00B /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52041C452CE367AE0064D00B /* Poppins-Medium.ttf */; };
+		52041C4D2CE367AF0064D00B /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52041C462CE367AE0064D00B /* Poppins-Regular.ttf */; };
+		52041C4E2CE367AF0064D00B /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52041C472CE367AE0064D00B /* Poppins-SemiBold.ttf */; };
+		52041C4F2CE367AF0064D00B /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52041C482CE367AE0064D00B /* Poppins-Light.ttf */; };
+		52041C502CE367AF0064D00B /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52041C492CE367AF0064D00B /* Poppins-Bold.ttf */; };
+		52041C512CE367AF0064D00B /* Amsterdam.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52041C4A2CE367AF0064D00B /* Amsterdam.ttf */; };
+		52041C532CE368230064D00B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52041C522CE368230064D00B /* Constants.swift */; };
 		5283312F2CE15727007073C1 /* CommandVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5283312E2CE15727007073C1 /* CommandVC.swift */; };
 		528D433F2CE13F2300EE7C3B /* J-CON.gif in Resources */ = {isa = PBXBuildFile; fileRef = 528D433E2CE13F2300EE7C3B /* J-CON.gif */; };
 		52BD52932CDFEF8800DFA8F8 /* BaseCVVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BD52912CDFEF8800DFA8F8 /* BaseCVVC.swift */; };
@@ -26,13 +35,25 @@
 		52DF9AC32CDE6A2900E22FCC /* J_Con.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52DF9AC12CDE6A2900E22FCC /* J_Con.xcdatamodeld */; };
 		52DF9AC52CDE6A2B00E22FCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52DF9AC42CDE6A2B00E22FCC /* Assets.xcassets */; };
 		52DF9AC82CDE6A2B00E22FCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52DF9AC62CDE6A2B00E22FCC /* LaunchScreen.storyboard */; };
+		52EBEFF82D0215230030A727 /* TemplateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBEFF72D0214F80030A727 /* TemplateVC.swift */; };
+		52EBEFFC2D022D210030A727 /* TemplateCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EBEFFA2D022D210030A727 /* TemplateCVCell.swift */; };
+		52EBEFFD2D022D210030A727 /* TemplateCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52EBEFFB2D022D210030A727 /* TemplateCVCell.xib */; };
 		670BC2D9E1915DB78F724B25 /* Pods_J_Con.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8CA661B4C3C183317FCC73D /* Pods_J_Con.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D78B50F6D5C7DBC2BA61160 /* Pods-J-Con.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-J-Con.release.xcconfig"; path = "Target Support Files/Pods-J-Con/Pods-J-Con.release.xcconfig"; sourceTree = "<group>"; };
 		23A1B456F67AC04E7CE95568 /* Pods-J-Con.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-J-Con.debug.xcconfig"; path = "Target Support Files/Pods-J-Con/Pods-J-Con.debug.xcconfig"; sourceTree = "<group>"; };
-		5241DCFA2CE161EA000EFC56 /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
+		52041C3F2CE366230064D00B /* RotatingCharacterLoaderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingCharacterLoaderVC.swift; sourceTree = "<group>"; };
+		52041C412CE366310064D00B /* RotatingCharacterLoaderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RotatingCharacterLoaderVC.xib; sourceTree = "<group>"; };
+		52041C442CE367AE0064D00B /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		52041C452CE367AE0064D00B /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		52041C462CE367AE0064D00B /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		52041C472CE367AE0064D00B /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		52041C482CE367AE0064D00B /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		52041C492CE367AF0064D00B /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		52041C4A2CE367AF0064D00B /* Amsterdam.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Amsterdam.ttf; sourceTree = "<group>"; };
+		52041C522CE368230064D00B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5283312E2CE15727007073C1 /* CommandVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandVC.swift; sourceTree = "<group>"; };
 		528D433E2CE13F2300EE7C3B /* J-CON.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "J-CON.gif"; sourceTree = "<group>"; };
 		52BD528C2CDFEF0600DFA8F8 /* IBDESIGNABLE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDESIGNABLE.swift; sourceTree = "<group>"; };
@@ -54,6 +75,9 @@
 		52DF9AC42CDE6A2B00E22FCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52DF9AC72CDE6A2B00E22FCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52DF9AC92CDE6A2B00E22FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52EBEFF72D0214F80030A727 /* TemplateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateVC.swift; sourceTree = "<group>"; };
+		52EBEFFA2D022D210030A727 /* TemplateCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCVCell.swift; sourceTree = "<group>"; };
+		52EBEFFB2D022D210030A727 /* TemplateCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateCVCell.xib; sourceTree = "<group>"; };
 		B8CA661B4C3C183317FCC73D /* Pods_J_Con.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_J_Con.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +101,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		52041C432CE367840064D00B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				52041C4A2CE367AF0064D00B /* Amsterdam.ttf */,
+				52041C442CE367AE0064D00B /* Poppins-Black.ttf */,
+				52041C492CE367AF0064D00B /* Poppins-Bold.ttf */,
+				52041C482CE367AE0064D00B /* Poppins-Light.ttf */,
+				52041C452CE367AE0064D00B /* Poppins-Medium.ttf */,
+				52041C462CE367AE0064D00B /* Poppins-Regular.ttf */,
+				52041C472CE367AE0064D00B /* Poppins-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		52BD528B2CDFEEF400DFA8F8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +124,7 @@
 				52BD528D2CDFEF4F00DFA8F8 /* ColumnFlowLayout.swift */,
 				52BD528F2CDFEF4F00DFA8F8 /* SafariHelper.swift */,
 				52BD528C2CDFEF0600DFA8F8 /* IBDESIGNABLE.swift */,
+				52041C522CE368230064D00B /* Constants.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -93,6 +132,9 @@
 		52BD52952CDFEF8D00DFA8F8 /* xibs */ = {
 			isa = PBXGroup;
 			children = (
+				52EBEFF92D022CEF0030A727 /* CVCell */,
+				52041C3F2CE366230064D00B /* RotatingCharacterLoaderVC.swift */,
+				52041C412CE366310064D00B /* RotatingCharacterLoaderVC.xib */,
 				52BD52912CDFEF8800DFA8F8 /* BaseCVVC.swift */,
 				52BD52922CDFEF8800DFA8F8 /* BaseCVVC.xib */,
 			);
@@ -102,10 +144,10 @@
 		52BD529C2CDFF37800DFA8F8 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				52EBEFF72D0214F80030A727 /* TemplateVC.swift */,
 				52BD529D2CDFF38B00DFA8F8 /* Splashvc.swift */,
 				52BD529F2CDFFC7800DFA8F8 /* HomeVC.swift */,
 				5283312E2CE15727007073C1 /* CommandVC.swift */,
-				5241DCFA2CE161EA000EFC56 /* LoaderVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -131,6 +173,7 @@
 		52DF9AB72CDE6A2900E22FCC /* J-Con */ = {
 			isa = PBXGroup;
 			children = (
+				52041C432CE367840064D00B /* Font */,
 				52BD529C2CDFF37800DFA8F8 /* VC */,
 				52BD52952CDFEF8D00DFA8F8 /* xibs */,
 				52BD528B2CDFEEF400DFA8F8 /* Helper */,
@@ -145,6 +188,15 @@
 				52DF9AC12CDE6A2900E22FCC /* J_Con.xcdatamodeld */,
 			);
 			path = "J-Con";
+			sourceTree = "<group>";
+		};
+		52EBEFF92D022CEF0030A727 /* CVCell */ = {
+			isa = PBXGroup;
+			children = (
+				52EBEFFA2D022D210030A727 /* TemplateCVCell.swift */,
+				52EBEFFB2D022D210030A727 /* TemplateCVCell.xib */,
+			);
+			path = CVCell;
 			sourceTree = "<group>";
 		};
 		CC9CB9F4ABA590C1E4D2F471 /* Pods */ = {
@@ -218,9 +270,18 @@
 			files = (
 				52DF9AC82CDE6A2B00E22FCC /* LaunchScreen.storyboard in Resources */,
 				52DF9AC52CDE6A2B00E22FCC /* Assets.xcassets in Resources */,
+				52041C512CE367AF0064D00B /* Amsterdam.ttf in Resources */,
 				52BD52942CDFEF8900DFA8F8 /* BaseCVVC.xib in Resources */,
+				52041C4D2CE367AF0064D00B /* Poppins-Regular.ttf in Resources */,
+				52041C4B2CE367AF0064D00B /* Poppins-Black.ttf in Resources */,
+				52EBEFFD2D022D210030A727 /* TemplateCVCell.xib in Resources */,
+				52041C4E2CE367AF0064D00B /* Poppins-SemiBold.ttf in Resources */,
 				528D433F2CE13F2300EE7C3B /* J-CON.gif in Resources */,
+				52041C502CE367AF0064D00B /* Poppins-Bold.ttf in Resources */,
+				52041C4C2CE367AF0064D00B /* Poppins-Medium.ttf in Resources */,
 				52DF9AC02CDE6A2900E22FCC /* Main.storyboard in Resources */,
+				52041C4F2CE367AF0064D00B /* Poppins-Light.ttf in Resources */,
+				52041C422CE366310064D00B /* RotatingCharacterLoaderVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,15 +334,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52EBEFF82D0215230030A727 /* TemplateVC.swift in Sources */,
+				52041C402CE366230064D00B /* RotatingCharacterLoaderVC.swift in Sources */,
 				52DF9ABD2CDE6A2900E22FCC /* ViewController.swift in Sources */,
 				52BD529E2CDFF38B00DFA8F8 /* Splashvc.swift in Sources */,
 				52BD52962CDFF16B00DFA8F8 /* ColumnFlowLayout.swift in Sources */,
 				52DF9AB92CDE6A2900E22FCC /* AppDelegate.swift in Sources */,
+				52041C532CE368230064D00B /* Constants.swift in Sources */,
 				52DF9ABB2CDE6A2900E22FCC /* SceneDelegate.swift in Sources */,
-				5241DCFB2CE161EA000EFC56 /* LoaderVC.swift in Sources */,
 				52BD529B2CDFF26100DFA8F8 /* CircularTextViewswift.swift in Sources */,
 				52DF9AC32CDE6A2900E22FCC /* J_Con.xcdatamodeld in Sources */,
 				52BD529A2CDFF25C00DFA8F8 /* SafariHelper.swift in Sources */,
+				52EBEFFC2D022D210030A727 /* TemplateCVCell.swift in Sources */,
 				52BD52932CDFEF8800DFA8F8 /* BaseCVVC.swift in Sources */,
 				52BD52A02CDFFC7800DFA8F8 /* HomeVC.swift in Sources */,
 				52BD52992CDFF25700DFA8F8 /* IBDESIGNABLE.swift in Sources */,
